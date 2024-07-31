@@ -1,0 +1,58 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.review {
+  @apply bg-[url('/shutterstock_2029653971-scaled.jpg')] bg-cover bg-center bg-fixed relative;
+}
+
+.review::before {
+  content: "";
+  display: block;
+  opacity: 0.5;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.shutter {
+  @apply bg-[url('/shutterstock_2028480539-scaled.jpg')] bg-cover h-[460px] w-[85vw]  relative  rounded-3xl;
+}
+
+.shutter::before {
+  border-color: none;
+  content: "";
+  display: block;
+  opacity: 0.4;
+  background-color: #0c7b09;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  @apply rounded-3xl;
+}
+
+.foot {
+  @apply h-[50vh] bg-[url('/DSC8364-scaled-e1719258497306.jpg')] relative bg-cover bg-bottom xl:h-[70vh];
+}
+
+.foot::before {
+  content: "";
+  display: block;
+  opacity: 0.4;
+  background-color: #0c7b09;
+  height: 50vh;
+  @apply xl:h-[70vh];
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure the overlay is behind the content */
+}
+
+.foot .content {
+  position: relative;
+  z-index: 2; /* Ensure the content is in front of the overlay */
+}
